@@ -31,7 +31,7 @@ public class CustomerController {
     @PostMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
         System.out.println("🛃 theCustomer = " + theCustomer);
-        System.out.println("📚 theBindingResult = " + theBindingResult);
+        System.out.println("📚 theBindingResult = " + theBindingResult.toString());
 
         System.out.println("theCustomer = |" + theCustomer.getLastName() + "|");
         if (theBindingResult.hasErrors()) {
