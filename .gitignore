@@ -1,23 +1,112 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# ============================================
+# Spring Boot / Java Project .gitignore
+# Comprehensive coverage for modern Java development
+# ============================================
 
-### STS ###
+### HELP FILES ###
+HELP.md
+*.md.tmp
+
+### MAVEN ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/MavenWrapperDownloader.java
+
+### MAVEN LOGS ###
+*.log
+*.log.gz
+logs/
+log/
+
+### GRADLE ###
+.gradle/
+gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+gradle-app.setting
+gradle-wrapper.jar
+gradle-wrapper.properties
+.gradletasknamecache
+buildSrc/
+
+### STS (Spring Tool Suite) ###
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
+.springBeans.xml
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
+.idea_modules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/mongoSettings.xml
+.idea/**/vcs.xml
+.idea/**/jsLibraryMappings.xml
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
+.idea/**/codeStyles/
+.idea/**/compiler.xml
+.idea/**/encodings.xml
+.idea/**/jarRepositories.xml
+.idea/**/misc.xml
+.idea/**/modules.xml
+.idea/**/uiDesigner.xml
+
+### Eclipse ###
+.project
+.classpath
+.settings/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.lock
+.download_dependencies_failed
+.recommenders/
+.ecore
+.buildpath
+.externalToolBuilders/
+.launch
+.springBeans
+.factorypath
+.apt_generated
+.remote-repositories
+.checkstyle
+.vscode/
 
 ### NetBeans ###
 /nbproject/private/
@@ -28,6 +117,246 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+nb-configuration.xml
+nbactions.xml
+*.orig
 
 ### VS Code ###
 .vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+### OS Generated Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.cab
+*.dll
+*.exe
+*.obj
+*.pid
+*.seed
+*.pid.lock
+*.lnk
+*.tmp
+
+### Logs & Temp Files ###
+*.log
+*.temp
+*.tmp
+*.cache
+*.dump
+*.stackdump
+*.hs_err_pid*
+*.jfr
+*.hprof
+*.prof
+*.nps
+*.npt
+*.threaddump
+*.heapdump
+*.dump.hprof
+
+### Application Specific ###
+application-local.properties
+application-dev.properties
+application-*.local.properties
+application-*.dev.properties
+*.secret.properties
+*.key
+*.p12
+*.jks
+*.cer
+*.crt
+*.pem
+.env
+.env.local
+.env.*.local
+.secrets/
+
+### Build Tools ###
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.class
+*.native
+*.so
+*.dylib
+*.dll
+
+### Test & Coverage ###
+test-output/
+surefire-reports/
+failsafe-reports/
+jacoco.exec
+coverage/
+.coveralls.yml
+.jacoco-report/
+
+### Docker ###
+.dockerignore
+Dockerfile.tmp
+docker-compose.override.yml
+docker-compose.override.yaml
+*.container
+
+### Kubernetes ###
+*.secret.yaml
+*.secret.yml
+secrets.yaml
+secrets.yml
+
+### Node / Frontend (if using webjars or frontend-maven-plugin) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+web_modules/
+
+### SonarQube / Code Quality ###
+.sonar/
+sonar-project.properties
+.scannerwork/
+.eslintcache
+.pm2/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+### CI/CD ###
+.ci/
+.jenkins/
+.gitlab-ci-local/
+.github/dependabot.yml.tmp
+.teamcity/
+.azure-pipelines-local.yml
+
+### Temporary & Backup Files ###
+*~
+*.swp
+*.swo
+*.swn
+*.bak
+*.backup
+*.orig
+*.old
+*.save
+*.rsync
+*.DS_Store?
+
+### Vim ###
+*.sw?
+*.un~
+Session.vim
+.vim/
+.vimrc
+.gvimrc
+.tags
+.tags1
+.tags2
+
+### Sublime Text ###
+*.sublime-project
+*.sublime-workspace
+.sublime/
+.sublime-grunt.cache
+.sublime-gulp.cache
+
+### Memory & Performance ###
+*.hprof
+*.heap
+*.dump
+*.jfr
+*.nps
+*.npt
+
+### Archive Files ###
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.iso
+
+### Database ###
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.mv.db
+*.lock.db
+*.trace.db
+*.script
+*.log.db
+
+### Secret & Credentials ###
+*.secret
+*.key
+*.pem
+*.crt
+*.csr
+*.pkcs12
+*.pfx
+*.p12
+*.jks
+*.keystore
+*.truststore
+.credentials
+.credentials.json
+.secrets/
+secrets.yml
+secrets.yaml
+
+### Mock Data ###
+mock-data/
+test-data/
+fixtures/
+sample-data/
+
+### JPA / Hibernate ###
+second-level-cache/
+query-cache/
+ehcache.xml.tmp
+hibernate.properties.tmp
+
+### Thymeleaf Cache ###
+thymeleaf.cache/
+**.cache.html
+
+### Spring Boot Actuator ###
+spring-actuator.log
+actuator-info.json
+health-check.json
+
+### Dependency Management ###
+.deps/
+.dependencies/
+dependency-check-report.html
+dependency-check-report.json
+
+### API Documentation ###
+api-docs/
+swagger-ui/
+swagger.json
+openapi.json
+openapi.yaml
+
+### Custom Patterns ###
+# Add any project-specific patterns below:
+# *.custom
+# custom-folder/
