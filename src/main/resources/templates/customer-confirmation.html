@@ -1,25 +1,75 @@
-<!DOCTYPEHTML>
-
+<!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Customer Confirmation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 500px;
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .field {
+            margin-bottom: 12px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .value {
+            margin-left: 5px;
+            color: #222;
+        }
     </style>
 </head>
 
 <body>
-The customer is confirmed: <span th:text="${customer.firstName + ' ' + customer.lastName}"/>
 
-<br><br>
+<div class="container">
+    <h2>Customer Confirmation</h2>
 
-Free passes: <span th:text="${customer.freePasses}"/>
+    <div class="field">
+        <span class="label">Name:</span>
+        <span class="value"
+              th:text="${customer.firstName + ' ' + customer.lastName}"></span>
+    </div>
 
-<br><br>
+    <div class="field">
+        <span class="label">Free Passes:</span>
+        <span class="value"
+              th:text="${customer.freePasses}"></span>
+    </div>
 
-Postal Code: <span th:text="${customer.postalCode}"/>
+    <div class="field">
+        <span class="label">Postal Code:</span>
+        <span class="value"
+              th:text="${customer.postalCode}"></span>
+    </div>
 
-<br><br>
+    <div class="field">
+        <span class="label">Course Code:</span>
+        <span class="value"
+              th:text="${customer.courseCode}"></span>
+    </div>
+</div>
 
-Course Code: <span th:text="${customer.courseCode}"/>
 </body>
-
 </html>
