@@ -3,20 +3,43 @@ package com.mvc.validator.validation;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
+/**
+ * Custom validation annotation to validate course codes.
+ * Ensures that the annotated field starts with a specific prefix.
+ *
+ * Default prefix: "LUV"
+ */
 @Constraint(validatedBy = CourseCodeConstraintValidator.class)
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target({
+        ElementType.FIELD,
+        ElementType.METHOD,
+        ElementType.PARAMETER,
+        ElementType.ANNOTATION_TYPE
+})
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface CourseCode {
-    public String value() default "LUV";
 
-    public String message() default "must start with LUV";
+    /**
+     * Defines the required prefix for the course code.
+     * Default is "LUV".
+     */
+    String value() default "LUV";
 
-    public Class<?>[] groups() default {};
+    /**
+     * Validation error message when constraint is violated.
+     */
+    String message() default "Course code must start with {value}";
 
-    public Class<? extends Payload>[] payload() default {};
+    /**
+     * Allows specification of validation groups.
+     */
+    Class<?>[] groups() default {};
+
+    /**
+     * Payload for clients to specify severity or metadata.
+     */
+    Class<? extends Payload>[] payload() default {};
 }
